@@ -1,0 +1,25 @@
+<script>
+    const arabicDict = {
+        "سلام": "Peace; greeting",
+        "كتاب": "Book",
+        "قلم": "Pen",
+        "مدرسة": "School",
+        "طعام": "Food"
+    };
+
+    function searchWord() {
+        const word = document.getElementById('wordInput').value.trim();
+        const resultDiv = document.getElementById('result');
+
+        if (!word) {
+            resultDiv.innerHTML = "Please enter a word.";
+            return;
+        }
+
+        if (arabicDict[word]) {
+            resultDiv.innerHTML = `<h2>${word}</h2><p>${arabicDict[word]}</p>`;
+        } else {
+            resultDiv.innerHTML = "Word not found in the dictionary.";
+        }
+    }
+</script>
